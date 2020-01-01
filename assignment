@@ -20,7 +20,6 @@ echo "friday";
 //السؤال التاني
 echo "<hr/>";
 echo "2: <br>";
-//لسه مش عارفه بالظبط
 $username="ahmed";
 $pass="567";
 if(gettype($username)=='string' && gettype($pass)=='string' ){
@@ -62,12 +61,12 @@ $keyword="PK";
 $found="no";
 for($i=0;$i<count($films);$i++){
 if($films[$i]==$keyword){
-$found="yes";
+$found="found";
 break;
 }
-$found="no";
+$found="not found";
 }
-echo $found;
+echo  "This Film :".$found;
 //السؤال التاني
 echo "<hr/>";
 echo "2: <br>";
@@ -77,6 +76,7 @@ if($films[$i]==$keyword){
 $count++;
 }
 }
+echo  "This Film repeat :".$count;
 //السؤال التالت
 echo "<hr/>";
 echo "3: <br>";
@@ -85,12 +85,13 @@ for($i=count($films)-1;$i>=0;$i--){
 echo $films[$i]."<br>";
 }
 // for loop السؤال الرابع
+//مش عارفه فين الغلط بصراحه
 echo "<hr/>";
 echo "4.1: <br>";
-$test=array("fast",1,990,true,55.67,false,"shaimaa");
-echo "Test: ";
+$test=array("fast",1,990,true,55.67,false,"shaimaa",true,false);
+echo "Test: <br> ";
 for($i=0;$i<count($test);$i++){
-if(gettype($test[i])!=boolean){
+if(gettype($test[i])!='boolean'){
 echo  $test[$i]."<br/>";
 }else{
 if($test[$i]==true){
@@ -103,17 +104,20 @@ echo "No <br>";
 // while  السؤال الرابع
 echo "<hr/>";
 echo "4.2: <br>";
+$test=array("fast",1,990,true,55.67,false,"shaimaa",true,false);
 $counter=0;
 while($counter<count($test)){
-if(gettype($test[i])!=boolean){
-echo  $test[$i]."<br/>";
+if(gettype($test[$counter])!='boolean'){
+echo  $test[$counter]."<br/>";
 }else{
-if($test[$i]==true){
+if($test[$counter]=='true'){
 echo "yes <br>";
 }else{
 echo "No <br>";
 }
 }
+
+$counter++;
 }
 //السؤال الخامس 
 echo "<hr/>";
@@ -123,7 +127,7 @@ $max=0;
 $sum=0;
 for($i=0;$i<count($num);$i++){
 if($num[$i]>$max){
-$max=$num[$i]
+$max=$num[$i];
 }
 $sum=$sum+$num[$i];
 }
@@ -142,7 +146,7 @@ echo "8: <br>";
 $mini=$max;
 for($i=0;$i<count($num);$i++){
 if($num[$i]<$mini){
-$mini=$num[$i]
+$mini=$num[$i];
 }
 }
 echo "Mini: ".$mini;
@@ -150,7 +154,7 @@ echo "Mini: ".$mini;
 echo "<hr/>";
 echo "8:";
 echo "<hr/>";
-echo "Sorted Num :";
+echo "Sorted Num :<br>";
 for($i=0;$i<count($num);$i++){
 $temp=0;
 for($j=$i;$j<count($num);$j++){
@@ -160,35 +164,27 @@ $num[$j]=$num[$i];
 $num[$i]=$temp;
 }
 }
-echo $num[$i];
+echo $num[$i]."<br>";
 }
 //السؤال التاسع
 echo "<hr/>";
 echo "9: <br>";
 $arr1=array("w",3,4,5);
 $arr2=array("w",10,4,5,44,77);
-$thesame=array(0,0,0);
+$thesame=array(0,5,9);
 $s=0;
-$diff=array(0,0,0,0);
-$d=0;
 for($i=0;$i<count($arr2);$i++){
-for($j=0;$j<count($arr1);$i++){
+for($j=0;$j<count($arr1);$j++){
 if($arr1[$j]==$arr2[$i]){
-$thesame[$s];
+$thesame[$s]=$arr2[$j];
 $s++;
-}else{
-$diff[$d];
-$d++;
+break;
 }
 }
 }
-echo "The Same :";
+echo "The Same :<br>";
 for($i=0;$i<count($thesame);$i++){
-echo $thesame."<br>";
+echo $thesame[$i]."<br>";
 }
-echo "<hr>";
-echo "Diff :";
-for($i=0;$i<count($diff);$i++){
-echo $diff."<br>";
-}
+
 <?php>
