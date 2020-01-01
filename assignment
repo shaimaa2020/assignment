@@ -1,0 +1,211 @@
+<?php?>
+//السؤال الاول
+echo "Task 1<br>1:";
+echo "<hr/>";
+$day="الاربعاء";
+if($day=="السبت"){
+echo "Saturday";
+}elseif($day=="الاحد"){
+echo "sunday";
+}elseif($day=="الاثنين"){
+echo "monday";
+} elseif($day=="الثلاثاء"){
+echo "Tuesday";
+} elseif($day=="الاربعاء"){
+echo "Wednesday";
+} elseif($day=="الخميس"){
+echo "Thursday";
+} elseif($day=="الجمعه"){
+echo "friday";
+}
+//السؤال التاني
+echo "<hr/>";
+echo "2:";
+echo "<hr/>";
+//لسه مش عارفه بالظبط
+$username=dfgh;
+$pass=24598;
+if(gittype($username)==string && gittype($pass)==string ){
+   if($username=="tariq" && $pass=="789"){
+   echo "Welcome Tariq";
+   }elseif($username=="ahmed" && $pass=="123"){
+   echo "Welcome Ahmed";
+   }else{
+   echo "Check your Name or pass";
+   }
+}else{
+   echo "Wrong Name";
+}
+echo "<hr/>";
+//السؤال التالت
+echo "3:";
+echo "<hr/>";
+$test=true;
+$type=gettype($test);
+if($type==string){
+echo $test;
+}elseif($type==integer){
+echo $test+5;
+}elseif($type==double){
+echo $test*7;
+}elseif($type==boolean){
+if($test==true){
+echo "yes";
+}else{
+echo "no";
+}
+}else{
+echo "Error";
+}
+//التاسك التاني المساله الاولي
+echo "<hr/>";
+echo "Task 2<br>1:";
+echo "<hr/>";
+$films=array("fast","home alone","dark night","avatar","home alone","avatar","home alone","fast","home alone");
+$keyword="PK";
+$found="no";
+for($i=0;$i<count($films);$i++){
+if($films[$i]==$keyword){
+$found="yes";
+break;
+}
+$found="no";
+}
+echo $found;
+//السؤال التاني
+echo "<hr/>";
+echo "2:";
+echo "<hr/>";
+$count=0;
+for($i=0;$i<count($films);$i++){
+if($films[$i]==$keyword){
+$count++;
+}
+}
+//السؤال التالت
+echo "<hr/>";
+echo "3:";
+echo "<hr/>";
+echo "Films( ";
+for($i=count($films)-1;$i>=0;$i--){
+if($i==0){
+echo  $films[$i]." )";
+}else{
+echo $films[$i]."_";
+}
+}
+// for loop السؤال الرابع
+echo "<hr/>";
+echo "4.1:";
+echo "<hr/>";
+$test=array("fast",1,990,true,55.67,false,"shaimaa");
+echo "Test: ";
+for($i=0;$i<count($test);$i++){
+if(gettype($test[i])!=boolean){
+echo  $test[$i]."<br/>";
+}else{
+if($test[$i]==true){
+echo "yes <br>";
+}else{
+echo "No <br>";
+}
+}
+}
+// while  السؤال الرابع
+echo "<hr/>";
+echo "4.2:";
+echo "<hr/>";
+$counter=0;
+while($counter<count($test)){
+if(gettype($test[i])!=boolean){
+echo  $test[$i]."<br/>";
+}else{
+if($test[$i]==true){
+echo "yes <br>";
+}else{
+echo "No <br>";
+}
+}
+}
+//السؤال الخامس 
+echo "<hr/>";
+echo "5:";
+echo "<hr/>";
+$num=array(2,8,6,66,10,999);
+$max=0;
+$sum=0;
+for($i=0;$i<count($num);$i++){
+if($num[$i]>$max){
+$max=$num[$i]
+}
+$sum=$sum+$num[$i];
+}
+echo "Max: ".$max;
+//السؤال السادس
+echo "<hr/>";
+echo "6:";
+echo "<hr/>";
+echo "Sum : ".$sum;
+//السؤال السابع 
+echo "<hr/>";
+echo "7:";
+echo "<hr/>";
+echo "Ava : ".$sum/count($num);
+//السؤال التامن
+echo "<hr/>";
+echo "8:";
+echo "<hr/>";
+$mini=$max;
+for($i=0;$i<count($num);$i++){
+if($num[$i]<$mini){
+$mini=$num[$i]
+}
+}
+echo "Mini: ".$mini;
+//  Sort
+echo "<hr/>";
+echo "8:";
+echo "<hr/>";
+echo "Sorted Num :";
+for($i=0;$i<count($num);$i++){
+$temp=0;
+for($j=$i;$j<count($num);$j++){
+if($num[$i]>$num[$j]){
+$temp=$num[$j];
+$num[$j]=$num[$i];
+$num[$i]=$temp;
+}
+}
+echo $num[$i];
+}
+//السؤال التاسع
+echo "<hr/>";
+echo "9:";
+echo "<hr/>";
+$arr1=array("w",3,4,5);
+$arr2=array("w",10,4,5,44,77);
+$thesame=array(0,0,0);
+$s=0;
+$diff=array(0,0,0,0);
+$d=0;
+for($i=0;$i<count($arr2);$i++){
+for($j=0;$j<count($arr1);$i++){
+if($arr1[$j]==$arr2[$i]){
+$thesame[$s];
+$s++;
+}else{
+$diff[$d];
+$d++;
+}
+}
+}
+echo "The Same :";
+for($i=0;$i<count($thesame);$i++){
+echo $thesame."<br>";
+}
+echo "<hr>";
+echo "Diff :";
+for($i=0;$i<count($diff);$i++){
+echo $diff."<br>";
+}
+<?php>
